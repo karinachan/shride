@@ -5,7 +5,23 @@
     <title> Shride </title>
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="design.css">
+<script language="JavaScript">
+var i = 0;
+var path = new Array();
+ 
+// LIST OF IMAGES
+path[0] = "img/oldprofile.jpg";
+path[1] = "img/oldcreatedrive.jpg";
+path[2] = "img/oldjoinride.jpg";
 
+function swapImage()
+{
+   document.slide.src = path[i];
+   if(i < path.length - 1) i++; else i = 0;
+   setTimeout("swapImage()",3000);
+}
+window.onload=swapImage;
+</script>
   <header> Prototyping </header>
 
 </head>
@@ -21,6 +37,14 @@
   </ul>
 </div>
 <div id="content">
+
+
+<div id="chunk">
+<h1>Prototype photos</h1>
+<h2>Create profile: </h2><img src="img/createprofile.png">
+<h2>Join a ride [as a rider]</h2><img src="img/riderpath.png">
+<h2>Create a ride [as a driver]</h2><img src="img/driverpath.png">
+</div>
 <div id="chunk">
 <h1>Prepare a briefing for test users. This should be at most a page of information about the purpose of your application and any background information about the domain that may be needed by your test users to understand it. Make your briefing short, clear and concise, it should not describe how to use the interface.</h1><br>
 Shride is a rideshare application that focuses on the internal community as a resource for transportation. Travelling by car can be difficult to finagle at Wellesley-- you can find rides on facebook, email, and spreadsheets, but it is altogether too chaotic to navigate. The goal in mind with Shride is to centralize the &ldquo;need ride&rdquo; messages sent out on public forums into one location and simplify the process of finding student drivers (who will likely charge less than a taxi service or nationwide rideshare application user). &nbsp;We also hope to provide a safer and more comfortable experience to users as all interactions are between Wellesley students. &nbsp;Inspired by Uber and Carma Carpool, we hope to change the way student transportation is run, both to reduce our carbon footprint and create a more tight knit community.
@@ -32,6 +56,15 @@ Shride is a rideshare application that focuses on the internal community as a re
 <li>Join a ride (as a rider)</li>
 <li>Make a ride (as a driver)</li>
 </ul> </br>
+We chose these tasks in particular because they highlight the main functionality of the application: creating rides, editing your profile, and joining rides. In order to display the full functionality, we ran it from all perspectives. The create profile task has several paths-- we highlight them in the video for clarification. 
+</div>
+<div id="chunk">
+<h1>Filmed task: Create a profile</h1>
+<video width=100% controls>
+  <source src="shride.m4v" type="video/mp4">
+
+Your browser does not support the video tag.
+</video>
 </div>
 <div id="chunk">
 <h1>Observations: Usability problems you discovered from the testing. Describe what users did, but don&#39;t record users&#39; names. Your observations should include both your pilot users, and at least 3 users from outside the class.</h1>
@@ -54,6 +87,9 @@ Shride is a rideshare application that focuses on the internal community as a re
 </div>
 <div id="chunk">
 <h1>Prototype iteration: Describe how your prototype changed between your pilot users and the real users.</h1>
+<h2>Slideshow</h2>
+<img  name="slide" src="img/oldprofile.jpg"/>
+<h2>How it changed</h2>
 <br>Breaking it up: We changed the &ldquo;Create Profile&rdquo; task to be a longer process with shorter fields for each step so that the user wouldn&rsquo;t have to be overwhelmed with fields.
 <br>Simplifying the action: we wanted users to feel like they were in control (adding &ldquo;Back&rdquo; and &ldquo;Next&rdquo; buttons to control action within the app).
 <br>Creating more paths: Added car information component to the driver profile, which only shows up if you are driver.
